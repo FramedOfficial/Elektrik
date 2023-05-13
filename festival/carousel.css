@@ -1,0 +1,153 @@
+/* ------------------------------------------ */
+/* CAROUSEL DIMENSIONS */
+
+#carousel {
+    width: 100%;
+    height: 600px;
+    border-radius: 20px;
+    width: 90%;
+    margin-left: 6%;
+}
+
+/* ------------------------------------------ */
+/* TEXT FORMAT change this to control the display of the text */
+
+.skippr>div h2 {
+    font-size: 140px;
+    color: #F2EEED;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    opacity: 95%;
+    border-radius: 10px;
+    font-family: 'Gotham';
+    background-image: linear-gradient(to right, #F3516F, #B5A2FC, #68AAEC);
+}
+
+/* ------------------------------------------ */
+/* TEXT VERTICAL ALIGNMENT 
+
+justify-content:flex-start;         align to top 
+justify-content:flex-start;         align to bottom
+
+*/
+
+.skippr>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* ------------------------------------------ */
+
+.skippr {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden
+}
+.skippr>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 62.5%;
+}
+
+/* ------------------------------------------ */
+
+.skippr>img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    min-height: 100%
+}
+
+.skippr-nav-container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 25px;
+    overflow: auto;
+    z-index: 999
+}
+
+/* ------------------------------------------ */
+/* MENU - DOT FORMAT */
+
+.skippr-nav-element-bubble {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 4px
+}
+
+/* ------------------------------------------ */
+/* MENU - BLOCK FORMAT */
+
+.skippr-nav-element-block {
+    width: 60px;
+    height: 10px
+}
+
+/* ------------------------------------------ */
+/* MENU colors  */
+
+.skippr-nav-element {
+    cursor: pointer;
+    float: left;
+    background-color: #F2EEED;
+    transition: all .25s linear;
+}
+.skippr-nav-element:hover {
+    background-color: #B5A2FC
+}
+.skippr-nav-element-active {
+    background-color: #F3516F
+}
+
+/* ------------------------------------------ */
+
+.skippr-arrow {
+    color: #121212;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    transform: translate(0%, -50%);
+    transform-origin: center center;
+    cursor: pointer;
+}
+
+/* ------------------------------------------ */
+/* ARROW FORMAT */
+
+.skippr-previous {
+    width: 30px;
+    height: 30px;
+    left: 2.5%;
+    transform: rotate(-45deg);
+    border-top: 8px solid #F3516F;
+    border-left: 8px solid #F3516F;
+    border-radius: 4px;
+}
+.skippr-next {
+    width: 30px;
+    height: 30px;
+    right: 3.5%;
+    transform: rotate(-45deg);
+    border-bottom: 8px solid #F3516F;
+    border-right: 8px solid #F3516F;
+    border-radius: 4px;
+}
+
+/* ------------------------------------------ */
+/* MOBILE  */
+
+@media screen and (max-width: 1280px) {
+   #carousel {
+       height: 500px;
+   }
+}
